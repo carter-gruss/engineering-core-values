@@ -1,15 +1,12 @@
-export class OrderReport {
-    private customer: string
-    private total: number
+import { SimpleOrderReport } from "./simpleOrderReport"
+
+export class OrderReport extends SimpleOrderReport{
+
 
     public constructor(customer: string, total: number){
-        this.customer = customer
-        this.total = total
-    }
+    
+        super(customer, total)
 
-    public invoice(): string{
-        const message = "Invoice " + this.customer + " " + this.total
-        return message
     }
 
     public shippingLabel(): string{

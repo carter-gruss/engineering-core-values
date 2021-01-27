@@ -1,6 +1,6 @@
-import {StoreInterface} from './storeInterface'
+import {InPersonInterface} from './storeInterface'
 
-export class WalkInClientImpl implements StoreInterface{
+export class WalkInClientImpl implements InPersonInterface{
     //a more complete solution may use the shopping cart from the domain modeling exercise
     public customer: string
     public product: string
@@ -10,16 +10,6 @@ export class WalkInClientImpl implements StoreInterface{
         this.customer = name
         this.product = food
         this.price = price
-    }
-
-    public acceptOnlineOrder() : string{
-        //not applicable for walk-in client
-        throw new Error("not supported")
-    }
-    
-    public payOnline(): string{
-        //not applicable for walk-in client
-        throw new Error("not supported")
     }
     
     public walkInCustomerOrder(): string{
