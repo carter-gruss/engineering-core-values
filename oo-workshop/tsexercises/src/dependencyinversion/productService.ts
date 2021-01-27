@@ -1,19 +1,18 @@
 import {Product} from './product'
-import {SimpleProductDao} from './simpleProductDao'
-
+import { ProductDao } from './productdao'
 export class ProductService {
-    private simpleProductDao: SimpleProductDao
+    private productDao: ProductDao
 
-    public constructor(simpleProductDao: SimpleProductDao){
-        this.simpleProductDao = simpleProductDao
+    public constructor(productDao: ProductDao){
+        this.productDao = productDao
     }
 
     public findById(id: number): Product | undefined{
-        return this.simpleProductDao.findById(id)
+        return this.productDao.findById(id)
     }
 
     public findAll(): Product[]{
-        return this.simpleProductDao.findAll()
+        return this.productDao.findAll()
     }
 
 }
